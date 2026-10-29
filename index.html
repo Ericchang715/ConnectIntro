@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#752c35">
+  <meta name="description" content="McGraw Hill Connect 教師教學支援指南。閱讀、備課、作業與評量，從一個章節開始試跑。">
+  <title>McGraw Hill Connect｜教師教學支援指南</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#intro" aria-label="McGraw Hill Connect，回到開場"><span class="brand-name">McGraw Hill <b>Connect</b></span><span class="brand-sub">教師教學支援指南</span></a>
+    <nav class="top-nav" aria-label="主要導覽"><a href="#path">教學流程</a><a href="#reader">功能導覽</a><a href="#setup">導入準備</a><a href="#pilot">一章試跑</a></nav>
+    <div class="header-actions"><button class="text-button chapter-menu-button" type="button">章節 <span aria-hidden="true">☰</span></button><button class="present-button" id="present-toggle" type="button" aria-pressed="false">簡報模式 <span aria-hidden="true">↗</span></button></div>
+    <div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div>
+  </header>
+  <aside class="chapter-rail" aria-label="章節快速導覽" id="chapter-rail"></aside>
+  <main id="main">
+    <section class="chapter intro" id="intro" data-chapter="0" aria-labelledby="intro-title">
+      <div class="hero wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="small-line"></span> McGRAW HILL CONNECT · TEACHING GUIDE</p>
+          <p class="hero-kicker">閱讀、作業、評量與學習追蹤，一次串接</p>
+          <h1 id="intro-title">備課時間，<br><em>留給教學本身。</em></h1>
+          <p class="hero-intro">把重複工作交給工具，將課堂留給理解與討論。<br class="desktop-only">從你最想改善的一個教學環節，認識 Connect。</p>
+          <div class="hero-actions"><a class="button solid" href="#reader">探索教學功能 <span aria-hidden="true">↓</span></a><a class="button quiet" href="assets/teacher-recommendation.pdf" target="_blank" rel="noopener">閱讀原始簡報 <span aria-hidden="true">↗</span></a></div>
+          <p class="byline">華泰文化 · 教師服務 <span>依教師推薦簡報整理</span></p>
+        </div>
+        <div class="hero-art">
+          <div class="hero-disc" aria-hidden="true"></div><div class="hero-orbit" aria-hidden="true"></div>
+          <span class="art-label">TEACHING, CONNECTED.</span>
+          <img class="hero-person" src="assets/eric-welcome.png" alt="原簡報中的教師服務人物形象，張開雙手介紹教學平台" width="627" height="627" fetchpriority="high">
+          <a class="hero-note" href="#pilot"><span class="note-number">01</span><span>不必一次改完整門課。<b>先從一章開始。</b></span><span aria-hidden="true">↗</span></a>
+          <span class="hero-art-footer">讓工具協助教學，讓教師專注學生</span>
+        </div>
+      </div>
+      <div class="path-band" id="path"><div class="wrap path-inner"><div class="path-heading"><span class="eyebrow">一堂課的完整流程</span><strong>每個環節，都有支援。</strong></div><nav class="teaching-path" aria-label="依教學環節探索"><a href="#resources"><span>01</span><b>備課</b><small>教材資源與命題</small></a><a href="#reader"><span>02</span><b>閱讀</b><small>理解原文與課前預習</small></a><a href="#question-bank"><span>03</span><b>作業</b><small>設定任務與即時回饋</small></a><a href="#aba"><span>04</span><b>評量</b><small>掌握概念與情境應用</small></a></nav></div></div>
+    </section>
+
+    <section class="chapter reader dark-section" id="reader" data-chapter="1" aria-labelledby="reader-title">
+      <div class="wrap feature-grid">
+        <div class="feature-copy"><p class="eyebrow"><span class="chapter-number">02</span> READING SUPPORT</p><p class="product-name">AI Reader</p><h2 id="reader-title">原文閱讀，<br>多一份理解支援。</h2><p class="lead">詞彙、長句與陌生概念，不必成為閱讀的停點。在同一個畫面取得支援，讓注意力回到內容。</p>
+          <div class="reader-tabs" role="tablist" aria-label="AI Reader 支援方式"><button type="button" id="reader-tab-0" role="tab" aria-selected="true" aria-controls="reader-panel" data-reader-tab="0">簡化與翻譯</button><button type="button" id="reader-tab-1" role="tab" aria-selected="false" aria-controls="reader-panel" tabindex="-1" data-reader-tab="1">閱讀重點</button><button type="button" id="reader-tab-2" role="tab" aria-selected="false" aria-controls="reader-panel" tabindex="-1" data-reader-tab="2">聽讀支援</button></div>
+          <div class="reader-panel" id="reader-panel" role="tabpanel" tabindex="0" aria-labelledby="reader-tab-0"><h3 id="reader-panel-title">先讀懂句子，再理解概念。</h3><p id="reader-panel-copy">利用簡化與翻譯協助理解原文，學生可依自己的閱讀速度前進。</p></div>
+          <p class="section-thought">降低語言門檻，讓理解繼續。</p>
+        </div>
+        <figure class="screen large-screen"><div class="screen-top"><span>AI READER</span><span>原始操作畫面</span></div><button type="button" class="image-open" data-image="0" aria-label="放大 AI Reader 操作畫面"><img src="assets/ai-reader.png" alt="AI Reader 電子書畫面，標示翻譯、閱讀重點與朗讀功能位置" width="1509" height="844" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button><figcaption>閱讀畫面與功能標示 · 原簡報第 2 頁</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="chapter smartbook light-section" id="smartbook" data-chapter="2" aria-labelledby="smartbook-title">
+      <div class="wrap section-heading"><p class="eyebrow"><span class="chapter-number">03</span> BEFORE THE CLASS</p><p class="product-name">SmartBook</p><h2 id="smartbook-title">讓學生帶著觀念，<br>走進教室。</h2><p class="lead">先讀、再練習，也回報自己的信心程度。上課前，教師就能掌握班級需要補強的概念。</p></div>
+      <div class="wrap smartbook-layout"><figure class="screen"><div class="screen-top"><span>SMARTBOOK</span><span>課前自適應閱讀</span></div><button type="button" class="image-open" data-image="1" aria-label="放大 SmartBook 課前閱讀畫面"><img src="assets/smartbook.png" alt="SmartBook 閱讀模式，包含概念題與學生信心回報" width="1305" height="724" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button><figcaption>讓課前預習留下可觀察的學習線索 · 原簡報第 3 頁</figcaption></figure>
+        <div class="learning-sequence"><div><span>01</span><h3>指定閱讀範圍</h3><p>讓預習有明確的章節與方向。</p></div><div><span>02</span><h3>概念題與信心回報</h3><p>學生作答，也檢視自己理解到哪裡。</p></div><div><span>03</span><h3>掌握班級弱點</h3><p>將結果轉成下一次課堂的具體安排。</p></div></div>
+      </div><div class="wrap statement"><span>留給課堂的時間</span><p>迷思釐清。重要推導。應用討論。</p></div>
+    </section>
+
+    <section class="chapter test-builder paper-section" id="test-builder" data-chapter="3" aria-labelledby="test-title">
+      <div class="wrap feature-grid test-layout"><div class="feature-copy"><p class="eyebrow"><span class="chapter-number">04</span> ASSESSMENT DESIGN</p><p class="product-name">Test Builder</p><h2 id="test-title">每次命題，<br>都有可重複的流程。</h2><p class="lead">依章節、題型、難度與認知層次篩題，再調整題目順序，完成考卷。</p><ol class="flat-list"><li><span>篩題</span><p>先對齊這次要評量的範圍與概念。</p></li><li><span>組卷</span><p>拖拉排序，安排適合班級的題目順序。</p></li><li><span>使用</span><p>依教學需求安排線上評量或匯出列印。</p></li></ol><p class="margin-note">保留常用篩選條件，下一次命題就從這裡接續。</p></div>
+        <div class="portrait-gallery"><figure class="screen tall-screen"><div class="screen-top"><span>篩選題目</span><span>01</span></div><button type="button" class="image-open" data-image="2" aria-label="放大 Test Builder 篩選題目畫面"><img src="assets/test-builder-filter.png" alt="依章節與條件篩選試題的操作畫面" width="761" height="1200" loading="lazy"><span class="zoom-label">放大 ↗</span></button><figcaption>選定命題範圍</figcaption></figure><figure class="screen tall-screen offset-screen"><div class="screen-top"><span>組卷設定</span><span>02</span></div><button type="button" class="image-open" data-image="3" aria-label="放大 Test Builder 組卷畫面"><img src="assets/test-builder-exam.png" alt="考卷題目清單與試題設定介面" width="647" height="1020" loading="lazy"><span class="zoom-label">放大 ↗</span></button><figcaption>整理題目與順序</figcaption></figure></div>
+      </div>
+    </section>
+
+    <section class="chapter question-bank dark-section" id="question-bank" data-chapter="4" aria-labelledby="question-title">
+      <div class="wrap question-heading"><div><p class="eyebrow"><span class="chapter-number">05</span> ASSIGNMENT & FEEDBACK</p><p class="product-name">Question Bank</p><h2 id="question-title">把批改時間，<br>移到精準回饋。</h2></div><div class="question-intro"><p class="lead">設定期限、作答次數與配分，運用題庫作業的自動批改與作答回饋，找出班級共同的錯誤概念。</p><p class="margin-note">派送前，先確認答案顯示與截止規則。</p></div></div>
+      <div class="wrap assignment-layout"><div class="assignment-rules"><p class="eyebrow">一份作業，先確認</p><ul><li><span>01</span> 開放與截止時間</li><li><span>02</span> 作答次數與配分</li><li><span>03</span> 答案與回饋顯示時機</li></ul><p>分數之外，也看見下一次課堂要補強的地方。</p></div><figure class="screen compact-portrait"><div class="screen-top"><span>作業規則</span><span>設定端</span></div><button type="button" class="image-open" data-image="4" aria-label="放大題庫作業設定畫面"><img src="assets/question-bank-settings.png" alt="Question Bank 題庫作業的規則與設定" width="761" height="1200" loading="lazy"><span class="zoom-label">放大 ↗</span></button></figure><figure class="screen compact-portrait"><div class="screen-top"><span>作答回饋</span><span>學生端</span></div><button type="button" class="image-open" data-image="5" aria-label="放大學生作答回饋畫面"><img src="assets/question-bank-feedback.png" alt="學生作答後的答案與回饋介面" width="761" height="1200" loading="lazy"><span class="zoom-label">放大 ↗</span></button></figure></div>
+    </section>
+
+    <section class="chapter excel light-section" id="excel" data-chapter="5" aria-labelledby="excel-title">
+      <div class="wrap excel-heading"><div><p class="eyebrow"><span class="chapter-number">06</span> LEARNING BY DOING</p><p class="product-name">Integrated Excel</p><h2 id="excel-title">不只算出答案，<br>也說清楚解題方法。</h2></div><p class="lead">在題目內操作 Excel，練習 PV、FV 等函數，同時檢查公式與結果。再請學生說明：為什麼選擇這個公式？</p></div>
+      <div class="wrap excel-stage"><div class="excel-side"><span>公式</span><span class="plus-sign">＋</span><span>結果</span><small>讓解題過程也能被討論</small></div><figure class="screen"><div class="screen-top"><span>INTEGRATED EXCEL</span><span>題目內的試算表操作</span></div><button type="button" class="image-open" data-image="6" aria-label="放大 Integrated Excel 操作畫面"><img src="assets/integrated-excel.png" alt="Connect 題目中直接操作 Excel 試算表並檢查公式和結果" width="1496" height="837" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button><figcaption>練習後，再討論公式選擇與判斷依據 · 原簡報第 6 頁</figcaption></figure></div>
+    </section>
+
+    <section class="chapter aba ink-section" id="aba" data-chapter="6" aria-labelledby="aba-title">
+      <div class="wrap aba-heading"><p class="eyebrow"><span class="chapter-number">07</span> APPLICATION-BASED ACTIVITIES</p><p class="product-name">ABA｜情境活動</p><h2 id="aba-title">把財管觀念，<br>放進情境決策。</h2><p class="lead">學生在企業情境中分析資訊、選擇方案，練習決策、溝通與談判。完成後，讓不同選擇與活動結果回到課堂討論。</p></div>
+      <div class="wrap aba-story"><figure class="screen scenario-screen"><div class="screen-top"><span>走進情境</span><span>任務與選擇</span></div><button type="button" class="image-open" data-image="7" aria-label="放大 ABA 情境任務畫面"><img src="assets/aba-scenario.png" alt="ABA 情境活動中以企業任務引導學生決策的畫面" width="619" height="459" loading="lazy"><span class="zoom-label">放大 ↗</span></button></figure><div class="aba-connector" aria-hidden="true"><span>做出選擇</span><b>→</b><span>回看結果</span></div><figure class="screen results-screen"><div class="screen-top"><span>回看表現</span><span>課堂討論的起點</span></div><button type="button" class="image-open" data-image="8" aria-label="放大 ABA 活動結果畫面"><img src="assets/aba-results.png" alt="ABA 活動結果與表現回饋畫面" width="1309" height="459" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button></figure></div><p class="wrap aba-question">課堂可以接著問：<strong>你根據哪些資訊，做出這個選擇？</strong></p>
+    </section>
+
+    <section class="chapter resources paper-section" id="resources" data-chapter="7" aria-labelledby="resources-title">
+      <div class="wrap feature-grid resources-layout"><div class="feature-copy"><p class="eyebrow"><span class="chapter-number">08</span> INSTRUCTOR RESOURCES</p><p class="product-name">教師備課資源</p><h2 id="resources-title">先有課程骨架，<br>再調整班級節奏。</h2><p class="lead">將常用備課材料集中在一處。挑選符合本學期目標的內容，再依學生程度與教學步調修改。</p><div class="resource-list"><div><span>教學參考</span><strong>教師手冊與解答</strong></div><div><span>課程材料</span><strong>投影片與 Excel 檔</strong></div><div><span>延伸教學</span><strong>影片與補充教材</strong></div></div><p class="margin-note">保留使用後的修改紀錄，讓下一次開課能接續累積。</p></div><figure class="screen resources-screen"><div class="screen-top"><span>INSTRUCTOR RESOURCES</span><span>教師資源區</span></div><button type="button" class="image-open" data-image="9" aria-label="放大教師備課資源畫面"><img src="assets/instructor-resources.png" alt="Connect 教師資源區，集中提供教學參考與備課材料" width="1480" height="830" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button><figcaption>資源項目依教材與課程權限而異 · 原簡報第 8 頁</figcaption></figure></div>
+    </section>
+
+    <section class="chapter setup light-section" id="setup" data-chapter="8" aria-labelledby="setup-title">
+      <div class="wrap setup-layout"><div class="setup-copy"><p class="eyebrow"><span class="chapter-number">09</span> READY FOR THE FIRST CLASS</p><p class="product-name">導入與支援</p><h2 id="setup-title">正式上課前，<br>先走過一次。</h2><p class="lead">先確認環境與設定，再用學生視角測試完整流程，讓第一堂課的操作更順暢。</p><div class="setup-progress"><span id="setup-status" aria-live="polite">已完成 0／3 項準備</span><span class="setup-progress-track" aria-hidden="true"><i id="setup-progress-fill"></i></span></div><fieldset class="setup-checks"><legend class="sr-only">上課前準備清單</legend><label><input type="checkbox" data-check="environment"><span><strong>確認操作環境</strong><small>先做系統相容性檢查；原簡報建議使用電腦與 Chrome。</small></span></label><label><input type="checkbox" data-check="save"><span><strong>完成設定並儲存</strong><small>離開設定流程時，確認使用 Save &amp; Exit。</small></span></label><label><input type="checkbox" data-check="student"><span><strong>完成學生視角測試</strong><small>走過閱讀、作答與提交，確認任務設定符合需求。</small></span></label></fieldset><p class="storage-note">清單僅記錄在這台裝置。</p></div><div class="setup-visual"><figure class="screen"><div class="screen-top"><span>環境確認</span><span>系統相容性檢查</span></div><button type="button" class="image-open" data-image="10" aria-label="放大系統相容性檢查畫面"><img src="assets/system-check.png" alt="Connect 系統相容性檢查與操作環境說明" width="1499" height="841" loading="lazy"><span class="zoom-label">放大檢視 ↗</span></button></figure><div class="support-note"><img src="assets/eric-support.png" alt="原簡報中的教師服務人物形象" width="623" height="623" loading="lazy"><p>需要協助時，<br><strong>聯繫你的華泰文化業務窗口。</strong><span>先確認教材、帳號權限與實際使用環境。</span></p></div></div></div>
+    </section>
+
+    <section class="chapter pilot dark-section" id="pilot" data-chapter="9" aria-labelledby="pilot-title">
+      <div class="wrap pilot-layout"><div class="pilot-copy"><p class="eyebrow"><span class="chapter-number">10</span> START SMALL</p><h2 id="pilot-title">選一章，<br>開始你的第一輪試跑。</h2><p class="lead">先申請測試帳號，選一個最熟悉的章節。設定一份預習或作業，觀察結果後再決定下一步。</p><div class="pilot-person"><img src="assets/eric-closing.png" alt="原簡報中的教師服務人物形象，陪伴教師開始一章試跑" width="627" height="627" loading="lazy"><p>先求流程順暢。<br><strong>再逐步增加章節與活動。</strong></p></div><button class="source-link" type="button" data-image="11">查看原簡報的作業設定畫面 <span aria-hidden="true">↗</span></button></div>
+        <div class="pilot-planner"><p class="planner-kicker">MY FIRST CHAPTER</p><h3>我的一章試跑計畫</h3><label class="chapter-input-label" for="pilot-chapter">想試跑的章節</label><input class="chapter-input" id="pilot-chapter" type="text" maxlength="50" placeholder="例如：貨幣時間價值" autocomplete="off"><fieldset class="pilot-goals"><legend>這次最想改善什麼？</legend><label><input type="radio" name="goal" value="reading" checked><span>課前閱讀</span></label><label><input type="radio" name="goal" value="feedback"><span>作業回饋</span></label><label><input type="radio" name="goal" value="application"><span>課堂應用</span></label></fieldset><div class="plan-output" id="plan-output" aria-live="polite"><p class="plan-recommendation">建議起點 <strong id="plan-tool">SmartBook</strong></p><ol><li><span>01</span><div><strong>申請測試帳號</strong><p>與業務窗口確認教材及可用功能。</p></div></li><li><span>02</span><div><strong id="plan-chapter">選定一個熟悉的章節</strong><p>先控制在一章的範圍，方便觀察與調整。</p></div></li><li><span>03</span><div><strong id="plan-task">設定一份課前預習</strong><p id="plan-detail">觀察學生完成率與概念題表現，找出下次課堂要釐清的地方。</p></div></li></ol><p class="plan-observe"><b>完成後觀察</b>備課時間、學生完成率與常見錯誤概念。</p></div><div class="plan-actions"><button class="button solid" id="copy-plan" type="button">複製試跑計畫 <span aria-hidden="true">↗</span></button><button class="text-button" id="download-plan" type="button">下載文字檔 ↓</button></div><p class="plan-status" id="plan-status" role="status"></p><p class="planner-note">這是個人的試跑規劃，不會送出帳號申請。</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-top"><div><span class="brand-name">McGraw Hill <b>Connect</b></span><p>教師教學支援指南 · 華泰文化教師服務</p></div><div class="footer-links"><a href="assets/teacher-recommendation.pdf" target="_blank" rel="noopener">閱讀原始簡報 PDF ↗</a><a href="assets/teacher-recommendation.pptx" download>下載原始 PPTX ↓</a><a href="#intro">回到開場 ↑</a></div></div><div class="wrap footer-note"><p>內容與操作畫面依使用者提供的 10 頁教師推薦簡報整理。功能、教材資源與介面以實際課程及帳號權限為準。</p><span>TEACHING GUIDE / 10 CHAPTERS</span></div></footer>
+
+  <div class="presenter-bar" id="presenter-bar" hidden><button type="button" id="prev-chapter" aria-label="上一章">←</button><span class="presenter-position"><b id="current-page">01</b><i>／10</i></span><span id="current-chapter-title">教學全貌</span><button type="button" id="next-chapter" aria-label="下一章">→</button><span class="presenter-divider"></span><button type="button" id="notes-toggle" aria-expanded="false" aria-controls="speaker-notes">講者備註</button><button type="button" id="exit-present">結束</button></div>
+  <aside class="speaker-notes" id="speaker-notes" aria-label="講者備註" hidden><div><p>原簡報講者備註</p><button type="button" id="notes-close" aria-label="關閉講者備註">×</button></div><h3 id="notes-title">教學全貌</h3><p id="notes-copy"></p><span id="notes-source">原簡報第 1 頁</span></aside>
+  <dialog class="image-dialog" id="image-dialog" aria-labelledby="image-title"><div class="dialog-heading"><div><span class="eyebrow" id="image-page"></span><h2 id="image-title"></h2></div><button class="dialog-close" type="button" id="image-close" aria-label="關閉圖片">×</button></div><div class="image-stage" id="image-stage"><img id="full-image" src="assets/ai-reader.png" alt=""></div><div class="image-toolbar"><button type="button" id="image-prev" aria-label="前一張操作畫面">←</button><span id="image-count">1 / 12</span><button type="button" id="image-next" aria-label="下一張操作畫面">→</button><button type="button" id="image-zoom" aria-pressed="false">放大閱讀</button><a id="image-original" href="assets/ai-reader.png" target="_blank" rel="noopener">開啟原圖 ↗</a></div></dialog>
+  <dialog class="chapter-dialog" id="chapter-dialog" aria-labelledby="chapter-menu-title"><div class="dialog-heading"><div><p class="eyebrow">CONTENTS</p><h2 id="chapter-menu-title">選擇章節</h2></div><button class="dialog-close" type="button" id="chapter-close" aria-label="關閉章節目錄">×</button></div><ol id="chapter-list"></ol></dialog>
+  <div id="copy-fallback" class="copy-fallback" hidden><label for="copy-plan-text">請選取並複製你的試跑計畫</label><textarea id="copy-plan-text" readonly rows="10"></textarea><button class="text-button" type="button" id="copy-fallback-close">收起</button></div>
+</body>
+</html>
